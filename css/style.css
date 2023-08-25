@@ -9,3 +9,27 @@ header{
 .iconos{
     gap: 16px;
 }
+.card{
+    background-color: white;
+    width: 17.8125rem;
+    height: 22.0625rem;
+    
+}
+.img-principal{
+    width: 8.651rem;
+    height: 10.18794rem;
+    transform: rotate(-30.014deg);
+}
+@media (max-width: 800px){
+    .container{
+        display: flex;
+        width: 388px;
+        padding: 36px 19px;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        justify-content: space-evenly;
+    }
+}
+
+
