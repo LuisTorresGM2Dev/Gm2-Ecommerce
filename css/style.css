@@ -1,35 +1,71 @@
 body{
     background-color: black;
+    padding: 2rem 7.5rem 9.4375rem 5.6875rem;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.all-content{
+    flex-direction: column;
+    align-items: flex-end;
 }
 header{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
-.iconos{
-    gap: 16px;
+.gm2{
+    width: 11.3125rem;
+    height: 4.1875rem;
 }
-.card{
-    background-color: white;
+.header-options{
+    margin: auto 0;
+    margin-left: auto;
+    display: flex;
+    gap: 1rem;
+}
+.header-options img{
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.main{
+    gap: 3.5rem;
+}
+h2{
+    color: #FFF;
+    font-family: "Inter";
+    font-size: 1.5625rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    padding-top: 3.5rem;
+}
+.part1{
+    background-color: #FFF;
     width: 17.8125rem;
-    height: 22.0625rem;
-    
+    height: 18.30rem;
+    border-radius: 0.625rem 0.625rem 0rem 0.625rem;
+    justify-content: center;
 }
-.img-principal{
+#llave-inglesa{
+    padding-left: 40px;
     width: 8.651rem;
     height: 10.18794rem;
-    transform: rotate(-30.014deg);
 }
-@media (max-width: 800px){
-    .container{
-        display: flex;
-        width: 388px;
-        padding: 36px 19px;
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-        justify-content: space-evenly;
-    }
+.cart-part2{
+    display: flex;
+    height: 3.70rem;
+    width: 17.8125rem;
 }
-
-
+.part-card-2{
+   background-color: #FFF;
+   height: 3.70rem;
+   width: 13.36rem;
+   border-radius: 0rem 0rem 0.6125rem 0.6125rem;
+}
+.button-cart{
+    background-color: gold;
+    height: 3.70rem;
+    width: 4.45rem;
+    border-radius: 0rem 0.6125rem 0rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

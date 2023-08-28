@@ -3,29 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecommerce</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
+    <title>Ecomerce</title>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="./images/Vector-g.svg" alt="">
-            <img src="./images/Vector-m.svg" alt="">
-            <img src="./images/Vector-2.svg" alt="">
-        </div>
-
-        <div class="iconos">
-            <img src="./images/icon profile.svg" alt="">
-            <img src="./images/icon cart.svg" alt="">
-        </div>
-    </header>
-
-    <div class="card">
-        <!-- <img src="./images/llaveInglesa.png" alt="" class="img-principal">
-        <div class="info">
-            <p>Lorem ipsum dolor sit amet consectetur</p>
-            <h4>Identifier number</h4>
-        </div> -->
+    <div class="all-content">
+        <header>
+            <div class="gm2">
+                <img src="./images/Vector-g.svg" alt="">
+                <img src="./images/Vector-m.svg" alt="">
+                <img src="./images/Vector-2.svg" alt="">
+            </div>
+            <div class="header-options">
+                <img id="login" src="./images/icon cart.svg" alt="">
+                <img id="cart" src="./images/icon profile.svg" alt="">
+            </div>
+        </header>
+        <main>
+            <section class="featured-prodcuts">
+                <h2>Productos destacados</h2>
+                <div class="container-cards">
+                    <div class="part1">
+                        <img id="llave-inglesa" src="./images/llaveInglesa.png" alt="">
+                        <h3 class="name-of-products">Lorem Ipsum Dolor Sit Amet Consectetur</h3>
+                        <p class="identifier-number">Identifier number</p>
+                        <p class="previous price">$999</p>
+                    </div>
+                    <div class="cart-part2">
+                        <div class="button-cart">
+                            <img src="shopping-bag.png" alt="">
+                            <img src="plus.png" alt="">
+                        </div>
+                        <div class="part-card-2">
+                            <p class="actual-price">$699</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
 </body>
 </html>
