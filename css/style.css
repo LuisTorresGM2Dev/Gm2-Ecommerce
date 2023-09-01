@@ -1,71 +1,164 @@
 body{
-    background-color: black;
+    background-color: #222;
     padding: 2rem 7.5rem 9.4375rem 5.6875rem;
     flex-direction: column;
     align-items: flex-end;
 }
+
 .all-content{
     flex-direction: column;
     align-items: flex-end;
 }
+
 header{
     display: flex;
 }
+
 .gm2{
     width: 11.3125rem;
     height: 4.1875rem;
 }
+
 .header-options{
     margin: auto 0;
     margin-left: auto;
     display: flex;
     gap: 1rem;
 }
+
 .header-options img{
     height: 1.5rem;
     width: 1.5rem;
 }
+
 .main{
     gap: 3.5rem;
 }
+
 h2{
     color: #FFF;
-    font-family: "Inter";
+    font-family: 'Inter', sans-serif;
     font-size: 1.5625rem;
     font-style: normal;
     font-weight: 500;
     line-height: 120%;
     padding-top: 3.5rem;
 }
+
 .part1{
     background-color: #FFF;
     width: 17.8125rem;
     height: 18.30rem;
     border-radius: 0.625rem 0.625rem 0rem 0.625rem;
     justify-content: center;
+    padding-bottom: 6px;
+    position: relative;
 }
-#llave-inglesa{
+
+#stillson{
+    width: 138.416px;
+    height: 163.007px;
     padding-left: 40px;
-    width: 8.651rem;
-    height: 10.18794rem;
+    transform: rotate(-30.014deg);
 }
+
+#label{
+    position: absolute;
+    right: -15px;
+}
+
+.part1 svg text{
+    color: #000000;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.name-of-products{
+    padding: 0px 30px 0px 22px;
+    margin:10px 0px 10px 0px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 200;
+    text-transform: capitalize;
+}
+
+.identifier-number{
+    padding: 0px 30px 0px 22px;
+    color: #808080;
+    font-family: 'Rubik', sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%;
+    opacity: 0.7;
+}
+
+.previous-price{
+    margin-top: 0px;
+    text-align: right;
+    color: #808080;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 74%;
+    text-decoration: line-through;
+    padding-right: 30px;
+}
+
 .cart-part2{
     display: flex;
     height: 3.70rem;
     width: 17.8125rem;
 }
+
 .part-card-2{
    background-color: #FFF;
    height: 3.70rem;
    width: 13.36rem;
-   border-radius: 0rem 0rem 0.6125rem 0.6125rem;
+   border-radius: 0rem 0rem 0.6125rem 0.6125rem; 
+   margin-top: -1px;
 }
+
 .button-cart{
-    background-color: gold;
     height: 3.70rem;
     width: 4.45rem;
     border-radius: 0rem 0.6125rem 0rem 0rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    border: none;
+    background-color: transparent;
 }
+
+.button-cart::after{
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    width: 25px;
+    height: 50px;
+    top: 0px;
+    right: -1px;
+    border-top-right-radius: 15px;
+    box-shadow: 0px -15px 0 -0.3px #FFF;
+}
+
+.actual-price{
+    color: var(--red, #941B0C);
+    text-align: right;
+    font-family: 'Rubik', sans-serif;
+    font-size: 2.6875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    margin: 0;
+    padding-right: 30px;
+}
+
+
+
