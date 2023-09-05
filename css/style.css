@@ -55,7 +55,7 @@ h2{
     position: relative;
 }
 
-#stillson{
+.stillson{
     width: 138.416px;
     height: 163.007px;
     padding-left: 40px;
@@ -160,5 +160,9 @@ h2{
     padding-right: 30px;
 }
 
+.container-cards{
+    display: flex;
+    gap:50px;
+}
 
 
