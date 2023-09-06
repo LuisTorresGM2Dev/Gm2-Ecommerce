@@ -1,35 +1,37 @@
 let containerCards;
-const products = [
-    {
-        image:'./images/llaveInglesa.png',
-        name:'Stillson',
-        price: '999',
-        priceDescount:'699',
-        description:'Lorem Ipsum Dolor Sit Amet Consectetur'
-    },
+// const products = [
+//     {
+//         image:'./images/llaveInglesa.png',
+//         name:'Stillson',
+//         price: '999',
+//         priceDescount:'699',
+//         description:'Lorem Ipsum Dolor Sit Amet Consectetur'
+//     },
 
-    {
-        image:'./images/llaveInglesa.png',
-        name:'Stillson',
-        price: '999',
-        priceDescount:'699',
-        description: 'Lorem Ipsum Dolor Sit Amet Consectetur'
-    },
-    {
-        image:'./images/llaveInglesa.png',
-        name:'Stillson',
-        price: '999',
-        priceDescount:'699',
-        description: 'Lorem Ipsum Dolor Sit Amet Consectetur'
-    },
-    {
-        image:'./images/llaveInglesa.png',
-        name:'Stillson',
-        price: '999',
-        priceDescount:'699',
-        description: 'Lorem Ipsum Dolor Sit Amet Consectetur'
-    }
-]
+//     {
+//         image:'./images/llaveInglesa.png',
+//         name:'Stillson',
+//         price: '999',
+//         priceDescount:'699',
+//         description: 'Lorem Ipsum Dolor Sit Amet Consectetur'
+//     },
+//     {
+//         image:'./images/llaveInglesa.png',
+//         name:'Stillson',
+//         price: '999',
+//         priceDescount:'699',
+//         description: 'Lorem Ipsum Dolor Sit Amet Consectetur'
+//     },
+//     {
+//         image:'./images/llaveInglesa.png',
+//         name:'Stillson',
+//         price: '999',
+//         priceDescount:'699',
+//         description: 'Lorem Ipsum Dolor Sit Amet Consectetur'
+//     }
+// ]
+
+
 
 
 window.addEventListener("load", () => {
@@ -60,7 +62,24 @@ window.addEventListener("load", () => {
             </div>
         `;
 
-
         containerCards.appendChild(tarjetaProducto);
     });
 });
+
+
+fetch("https://64f659ae2b07270f705e6753.mockapi.io/api/products")
+.then(response => response.json())
+.then(data => );
+
+async function init() {
+    console.log("Init");
+  
+    const apiURL = "https://64f659ae2b07270f705e6753.mockapi.io/api/products";
+    const apiResponse = await fetch(apiURL)
+    const jsonData = await apiResponse.json();
+    console.log(apiResponse.status); // 200
+  
+    console.log(jsonData);
+  }
+  
+  init();
