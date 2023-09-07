@@ -1,55 +1,31 @@
 let containerCards;
-// const products = [
-//     {
-//         image:'./images/llaveInglesa.png',
-//         name:'Stillson',
-//         price: '999',
-//         priceDescount:'699',
-//         description:'Lorem Ipsum Dolor Sit Amet Consectetur'
-//     },
 
-//     {
-//         image:'./images/llaveInglesa.png',
-//         name:'Stillson',
-//         price: '999',
-//         priceDescount:'699',
-//         description: 'Lorem Ipsum Dolor Sit Amet Consectetur'
-//     },
-//     {
-//         image:'./images/llaveInglesa.png',
-//         name:'Stillson',
-//         price: '999',
-//         priceDescount:'699',
-//         description: 'Lorem Ipsum Dolor Sit Amet Consectetur'
-//     },
-//     {
-//         image:'./images/llaveInglesa.png',
-//         name:'Stillson',
-//         price: '999',
-//         priceDescount:'699',
-//         description: 'Lorem Ipsum Dolor Sit Amet Consectetur'
-//     }
-// ]
+async function fetchProducts() {
+    const apiURL = "https://64f659ae2b07270f705e6753.mockapi.io/api/products";
+    const apiResponse = await fetch(apiURL)
+    const jsonData = await apiResponse.json();
+    console.log(apiResponse.status);
+    console.log(jsonData);
+    return jsonData;
+}
 
-
-
-
-window.addEventListener("load", () => {
+async function onDocumentLoad() {
     containerCards = document.querySelector(".container-cards");
+    const products = await fetchProducts();
 
-    products.forEach((producto, index) => {
+    products.forEach((product,id) => {
 
         const tarjetaProducto = document.createElement("div");
         tarjetaProducto.classList.add("productCard");
 
         tarjetaProducto.innerHTML = `
             <div class="part1">
-                <img  class= "stillson"src="${producto.image}" alt="${producto.name}">
+                <img  class= "stillson"src="${product.image}" alt="">
                 <div class="product-data">
-                    <h3 class="name-of-products">${producto.description}</h3>
-                    <p class="identifier-number">Número de identificación ${index + 1}</p>
+                    <h3 class="name-of-products">${product.title}</h3>
+                    <p class="identifier-number">Número de identificación ${id}</p>
                 </div>
-                <p class="previous-price">$${producto.price}</p>
+                <p class="previous-price">$${product.price}</p>
             </div>
             <div class="cart-part2">
                 <div class="button-cart">
@@ -57,29 +33,15 @@ window.addEventListener("load", () => {
                     <img id="plus" src="./images/plus.png" alt="">
                 </div>
                 <div class="part-card-2">
-                    <p class="actual-price">$${producto.priceDescount}</p>
+                    <p class="actual-price">$${product.previousPrice}</p>
                 </div>
             </div>
         `;
 
         containerCards.appendChild(tarjetaProducto);
+
     });
-});
 
+}
 
-fetch("https://64f659ae2b07270f705e6753.mockapi.io/api/products")
-.then(response => response.json())
-.then(data => );
-
-async function init() {
-    console.log("Init");
-  
-    const apiURL = "https://64f659ae2b07270f705e6753.mockapi.io/api/products";
-    const apiResponse = await fetch(apiURL)
-    const jsonData = await apiResponse.json();
-    console.log(apiResponse.status); // 200
-  
-    console.log(jsonData);
-  }
-  
-  init();
+window.addEventListener("load", onDocumentLoad);
