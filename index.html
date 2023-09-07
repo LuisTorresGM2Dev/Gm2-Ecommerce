@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/logo-gm-medium.webp" type="image/x-icon">
     <title>Ecommerce</title>
 </head>
 <body>
@@ -34,7 +35,25 @@
             </section>
             <section class="sales">
                 <h2>Productos en oferta</h2>
-                
+                <div class="containerOfert">
+                    <div class="part1">
+                        <img  class= "stillson"src="${product.image}" alt="">
+                        <div class="product-data">
+                            <h3 class="name-of-products">${product.title}</h3>
+                            <p class="identifier-number">Número de identificación ${id}</p>
+                        </div>
+                        <p class="previous-price">$${product.price}</p>
+                    </div>
+                    <div class="cart-part2">
+                        <div class="button-cart">
+                            <img id="shopping-bag" src="./images/shopping-bag.png" alt="">
+                            <img id="plus" src="./images/plus.png" alt="">
+                        </div>
+                        <div class="part-card-2">
+                            <p class="actual-price">$${product.previousPrice}</p>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
     </div>
