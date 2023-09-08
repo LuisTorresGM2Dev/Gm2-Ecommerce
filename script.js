@@ -17,8 +17,9 @@ async function onDocumentLoad() {
 
         const tarjetaProducto = document.createElement("div");
         tarjetaProducto.classList.add("productCard");
-
-        tarjetaProducto.innerHTML = `
+        
+        if(product.featured == true){
+            tarjetaProducto.innerHTML = `
             <div class="part1">
                 <img  class= "stillson"src="${product.image}" alt="">
                 <div class="product-data">
@@ -39,9 +40,8 @@ async function onDocumentLoad() {
         `;
 
         containerCards.appendChild(tarjetaProducto);
-
+        }
     });
-
 }
 
 window.addEventListener("load", onDocumentLoad);
