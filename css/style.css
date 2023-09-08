@@ -168,5 +168,9 @@ h2{
     display: flex;
     gap:50px;
 }
+.container-oferts{
+    display: flex;
+    gap: 50px;
+}
 
 
